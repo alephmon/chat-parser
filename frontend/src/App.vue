@@ -20,7 +20,7 @@ export default {
   },
   mounted() {
     const id = 'mush.rtf';
-    fetch(`https://chat-parser-production.up.railway.app/chat?file=${id}.rtf`) // or chat.rtf
+    fetch(`https://chat-parser-production.up.railway.app/chat?file=${id}`) // or chat.rtf
       .then(res => res.json())
       .then(data => {
         this.chatMessages = data;
