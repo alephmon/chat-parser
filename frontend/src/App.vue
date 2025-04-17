@@ -19,7 +19,8 @@ export default {
     };
   },
   mounted() {
-    fetch('https://obscure-fortnight-4jjv5g44pxw6c5rx6-3000.app.github.dev/chat?file=mush.rtf') // or chat.rtf
+    const id = 'mush.rtf';
+    fetch(`https://chat-parser-production.up.railway.app/chat?file=${id}.rtf`) // or chat.rtf
       .then(res => res.json())
       .then(data => {
         this.chatMessages = data;
